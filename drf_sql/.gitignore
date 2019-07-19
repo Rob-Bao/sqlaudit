@@ -1,0 +1,6 @@
+*.log
+app/migrations/
+api/migrations/
+.idea/
+*.pyc
+.ide
