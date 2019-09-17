@@ -7,7 +7,7 @@
 
 ```bash
 # Clone project
-git clone https://gitlab.meipian.cn/devops/sqlcheck.git
+git clone https://github.com/Rob-Bao/sqlaudit.git
 
 # Install dependencies
 # Install Redis
