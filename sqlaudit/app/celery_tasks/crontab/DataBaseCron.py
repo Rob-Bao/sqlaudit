@@ -11,7 +11,7 @@
 @time: 2019/1/10 6:46 PM 
 """
 # import os
-# os.environ.update({"DJANGO_SETTINGS_MODULE": "mp_sqlcheck.settings"})
+# os.environ.update({"DJANGO_SETTINGS_MODULE": "SqlAudit.settings"})
 
 from app.instance.models import DatabaseInfo
 from app.instance.models import InstanceInfo

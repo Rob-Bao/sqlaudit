@@ -15,7 +15,7 @@ import configparser
 import re,os
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 configfile =  os.path.join(PROJECT_ROOT, 'env.txt'),
-# configfile = "/Users/baochengcai/Code/project/mp/mp_sqlcheck/app/env.txt"
+# configfile = "/Users/baochengcai/Code/project/mp/SqlAudit/app/env.txt"
 
 
 class MyConfig(configparser.ConfigParser):

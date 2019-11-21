@@ -11,7 +11,7 @@
 @time: 2019/4/8 10:35 AM 
 """
 import os
-os.environ.update({"DJANGO_SETTINGS_MODULE": "mp_sqlcheck.settings"})
+os.environ.update({"DJANGO_SETTINGS_MODULE": "SqlAudit.settings"})
 from app.celery_tasks.apps import MysqlCon
 from app.instance.models import InstanceInfo
 from app.instance.models import DbTableInfo

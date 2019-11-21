@@ -12,7 +12,7 @@
 """
 # from __future__ import unicode_literals
 import os,re
-os.environ.update({"DJANGO_SETTINGS_MODULE": "mp_sqlcheck.settings"})
+os.environ.update({"DJANGO_SETTINGS_MODULE": "SqlAudit.settings"})
 from app.work_order.models import WorkSheet
 from app.instance.action import InceptionClass
 from app.work_order.models import InceptionRes

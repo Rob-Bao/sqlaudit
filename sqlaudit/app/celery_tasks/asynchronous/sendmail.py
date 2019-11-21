@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 import os
-os.environ.update({"DJANGO_SETTINGS_MODULE": "mp_sqlcheck.settings"})
+os.environ.update({"DJANGO_SETTINGS_MODULE": "SqlAudit.settings"})
 from django.conf import settings
 from django.core.mail import EmailMultiAlternatives
 
