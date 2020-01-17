@@ -9,10 +9,11 @@
 
 ```bash
 # Clone project
-git clone https://gitlab.meipian.cn/devops/sqlcheck.git
+git clone https://github.com/Rob-Bao/sqlaudit.git
+cd vue_temp
 
 # Install dependencies
-npm install 
+npm install
 #or try
 npm install --unsafe-perm
 

@@ -53,7 +53,7 @@ pip3 install redis==2.10.6
 # Run drf ,use 8900 port
 python3 manage.py  makemigrations app
 python3 manage.py  migrate
-python3 manage.py  runserver 0.0.0.0:8900
+python3 manage.py  runserver 127.0.0.1:8890
 
 # Run another program Celery
 python3 manage.py celery worker --loglevel=info --beat
