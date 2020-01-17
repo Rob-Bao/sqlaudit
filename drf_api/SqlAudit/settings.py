@@ -255,4 +255,4 @@ EMAIL_HOST = 'smtp.exmail.qq.com'  # 如果是 163 改成 smtp.163.com
 EMAIL_PORT = 465
 EMAIL_HOST_USER = 'monitor@lanjingren.com' # 帐号
 EMAIL_HOST_PASSWORD = 'Bzh4PVjvog9puatg'  # 密码
-DEFAULT_FROM_EMAIL = '美篇SQL审核系统 <monitor@lanjingren.com>'
+DEFAULT_FROM_EMAIL = 'MySQL语法审核系统 <monitor@lanjingren.com>'
