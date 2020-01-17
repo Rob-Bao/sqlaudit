@@ -12,8 +12,8 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os, datetime, sys
-import ldap
-from django_auth_ldap.config import LDAPSearch,GroupOfNamesType
+# import ldap3
+# from django_auth_ldap.config import LDAPSearch,GroupOfNamesType
 import djcelery
 from celery.schedules import crontab
 
@@ -22,33 +22,33 @@ from celery.schedules import crontab
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# ldap setting
-AUTH_LDAP_SERVER_URI = 'ldap://172.17.116.67:389'
-AUTH_LDAP_BIND_DN = 'cn=Manager,dc=meipian,dc=com'
-AUTH_LDAP_BIND_PASSWORD = 'mUgIIsI3eBQrq#0x'
+# # ldap setting
+# AUTH_LDAP_SERVER_URI = 'ldap://172.17.116.67:389'
+# AUTH_LDAP_BIND_DN = 'cn=Manager,dc=meipian,dc=com'
+# AUTH_LDAP_BIND_PASSWORD = 'mUgIIsI3eBQrq#0x'
 
-AUTH_LDAP_USER_SEARCH = LDAPSearch("ou=Users,dc=meipian,dc=com",
-    ldap.SCOPE_SUBTREE, "(cn=%(user)s)")
+# AUTH_LDAP_USER_SEARCH = LDAPSearch("ou=Users,dc=meipian,dc=com",
+#     ldap.SCOPE_SUBTREE, "(cn=%(user)s)")
 
-AUTH_LDAP_GROUP_SEARCH = LDAPSearch("ou=Report,ou=Groups,dc=meipian,dc=com",
-    ldap.SCOPE_SUBTREE, "(objectClass=groupOfNames)"
-)
-AUTH_LDAP_GROUP_TYPE = GroupOfNamesType(name_attr="cn")
+# AUTH_LDAP_GROUP_SEARCH = LDAPSearch("ou=Report,ou=Groups,dc=meipian,dc=com",
+#     ldap.SCOPE_SUBTREE, "(objectClass=groupOfNames)"
+# )
+# AUTH_LDAP_GROUP_TYPE = GroupOfNamesType(name_attr="cn")
 
 
-AUTH_LDAP_USER_ATTR_MAP = {
-    "email": "mail",
-    "username": "cn",
-    "name_cn": "sn"
-}
+# AUTH_LDAP_USER_ATTR_MAP = {
+#     "email": "mail",
+#     "username": "cn",
+#     "name_cn": "sn"
+# }
 
-AUTH_LDAP_MIRROR_GROUPS = True
-AUTH_LDAP_ALWAYS_UPDATE_USER = True
+# AUTH_LDAP_MIRROR_GROUPS = True
+# AUTH_LDAP_ALWAYS_UPDATE_USER = True
 
-AUTHENTICATION_BACKENDS = (
-    'django_auth_ldap.backend.LDAPBackend',
-    'django.contrib.auth.backends.ModelBackend',
-)
+# AUTHENTICATION_BACKENDS = (
+#     'django_auth_ldap.backend.LDAPBackend',
+#     'django.contrib.auth.backends.ModelBackend',
+# )
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -133,9 +133,9 @@ TEMPLATES = [
 #跨域增加忽略
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_ALLOW_ALL = True
-CORS_ORIGIN_WHITELIST = (
-    '*'
-)
+# CORS_ORIGIN_WHITELIST = (
+#     'https://'
+# )
 
 CORS_ALLOW_METHODS = (
     'DELETE',
