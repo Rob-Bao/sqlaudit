@@ -57,7 +57,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       template: 'index.html',
       inject: true,
       favicon: resolve('favicon.ico'),
-      title: '美篇SQL审核系统'
+      title: 'MySQL语句审核系统'
     })
   ]
 })
