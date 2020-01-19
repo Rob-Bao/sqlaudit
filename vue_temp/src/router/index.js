@@ -94,7 +94,7 @@ export const constantRouterMap = [
     meta: { title: ' 库表信息 ', icon: 'documentation' },
     children: [
       {
-        path: 'https://www.tapd.cn/50533802/markdown_wikis/view/#1150533802001002966',
+        path: 'http://www.baidu.com',
         meta: { title: 'SQL规范', icon: 'link' }
       },
       {
@@ -123,14 +123,14 @@ export const constantRouterMap = [
         perms: 'auth.change_user',
         component: () => import('@/views/settings/people/index'),
         name: 'People',
-        meta: { title: '人员管理', icon: 'user' }
+        meta: { title: '用户管理', icon: 'user' }
       },
       {
         path: 'databases',
         perms: 'app.change_instanceinfo',
         component: () => import('@/views/settings/databases/index'),
         name: 'Databases',
-        meta: { title: '数据库管理', icon: 'database' }
+        meta: { title: '实例管理', icon: 'database' }
       }
     ]
   },

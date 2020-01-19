@@ -1,12 +1,12 @@
 <template>
   <div class="app-container">
     <div class="filter-container">
-      <el-input v-model="listQuery.workname" size="small" placeholder="工单标题" style="width: 200px;" class="filter-item" @keyup.enter.native="fetchData()"/>
-      <el-button class="filter-item" size="small" type="primary" icon="el-icon-search" @click="fetchData()">搜&刷</el-button>
       <router-link :to="'/task/create/'">
-        <el-button size="small" type="primary" icon="el-icon-edit">填写工单</el-button>
+        <el-button size="small" type="primary" icon="el-icon-edit">创建</el-button>
       </router-link>
-      <el-button class="filter-item" size="small" style="margin-left: 10px;" type="primary" icon="el-icon-check" @click="fetchData(0)">未审核</el-button>
+      <el-button class="filter-item" size="small" style="margin-left: 10px;" type="primary" icon="el-icon-phone" @click="fetchData(0)">待审核</el-button>
+      <el-input v-model="listQuery.workname" size="small" placeholder="工单标题" style="width: 200px;margin-left:50px;" class="filter-item" @keyup.enter.native="fetchData()"/>
+      <el-button class="filter-item" size="medium" type="text" icon="el-icon-search" @click="fetchData()">搜索</el-button>
     </div>
     <br>
     <table-detail :worklist="workers" />

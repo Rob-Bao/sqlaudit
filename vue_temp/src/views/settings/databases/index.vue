@@ -1,7 +1,7 @@
 <template>
   <div class="app-container">
     <div class="filter-container">
-      <el-button type="primary" size="small" icon="el-icon-edit" @click.native.prevent="handleCreate" >添加实例</el-button>
+      <el-button type="text" size="medium" icon="el-icon-edit" @click.native.prevent="handleCreate" >添加实例</el-button>
     </div>
     <br>
     <el-table
@@ -46,7 +46,7 @@
       </el-table-column>
       <el-table-column label="操作" width="90" align="center" >
         <template slot-scope="scope">
-          <el-button type="danger" size="small" icon="el-icon-delete" @click="deleteData(scope.row.id)"/>
+          <el-button type="text" size="medium" icon="el-icon-delete" @click="deleteData(scope.row.id)"/>
         </template>
       </el-table-column>
     </el-table>

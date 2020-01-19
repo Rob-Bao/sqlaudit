@@ -25,9 +25,9 @@
               @click.native="fetchDatatable()"/>
           </el-select>
         </el-form-item>
-        <el-form-item label="数据表名">
-          <el-input v-model="listQuery.table_name" size="small" placeholder="表名" style="width: 195px;" class="filter-item" clearable @keyup.enter.native="fetchDatatable" />
-          <el-button class="filter-item" size="small" type="primary" icon="el-icon-search" @click="fetchDatatable()">搜索</el-button>
+        <el-form-item label="搜索表名">
+          <el-input v-model="listQuery.table_name" size="small" placeholder="输入后回车进行搜索" style="width: 195px;" class="filter-item" clearable @keyup.enter.native="fetchDatatable" @click="fetchDatatable()" />
+          <!-- <el-button class="filter-item" size="medium" type="text" icon="el-icon-search" @click="fetchDatatable()">搜索</el-button> -->
         </el-form-item>
       </el-form>
     </div>

@@ -1,12 +1,14 @@
 <template>
   <div class="app-container">
     <div class="filter-container">
-      <el-input v-model="listQuery.workname" size="small" placeholder="工单标题" style="width: 200px;" class="filter-item" clearable @keyup.enter.native="fetchData()" />
-      <el-button class="filter-item" size="small" type="primary" icon="el-icon-search" @click="searchData">搜&刷</el-button>
       <el-button v-if="userrole==='auditor'" class="filter-item" size="small" style="margin-left: 10px;" type="primary" icon="el-icon-check" @click="fetchData(0)">未审核</el-button>
-      <el-button v-if="userrole==='admin'" class="filter-item" size="small" style="margin-left: 10px;" type="warning" icon="el-icon-check" @click="fetchData(1)">未执行</el-button>
+      <el-button v-if="userrole==='admin'" class="filter-item" size="small" style="margin-left: 10px;" type="warning" icon="el-icon-warning" @click="fetchData(1)">未执行</el-button>
       <el-button class="filter-item" size="small" style="margin-left: 10px;" type="success" icon="el-icon-check" @click="fetchData(3)">已完成</el-button>
       <el-button class="filter-item" size="small" style="margin-left: 10px;" type="danger" icon="el-icon-close" @click="fetchData(-1)">已驳回</el-button>
+      <!-- <el-form-item label="搜索表名"> -->
+      <el-input v-model="listQuery.workname" size="small" placeholder="工单标题" style="width:200px;margin-left:50px;" class="filter-item" clearable @keyup.enter.native="fetchData()" />
+      <el-button class="filter-item" size="medium" type="text" icon="el-icon-search" @click="searchData">搜索</el-button>
+      <!-- </el-form-item> -->
     </div>
     <br>
     <table-detail :worklist="audit" @upWorkstatus="upWorkstatus" />
