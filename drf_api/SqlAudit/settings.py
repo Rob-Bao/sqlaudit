@@ -24,13 +24,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # # ldap setting
 # AUTH_LDAP_SERVER_URI = 'ldap://172.17.116.67:389'
-# AUTH_LDAP_BIND_DN = 'cn=Manager,dc=meipian,dc=com'
+# AUTH_LDAP_BIND_DN = 'cn=Manager,dc=local,dc=com'
 # AUTH_LDAP_BIND_PASSWORD = 'mUgIIsI3eBQrq#0x'
 
-# AUTH_LDAP_USER_SEARCH = LDAPSearch("ou=Users,dc=meipian,dc=com",
+# AUTH_LDAP_USER_SEARCH = LDAPSearch("ou=Users,dc=local,dc=com",
 #     ldap.SCOPE_SUBTREE, "(cn=%(user)s)")
 
-# AUTH_LDAP_GROUP_SEARCH = LDAPSearch("ou=Report,ou=Groups,dc=meipian,dc=com",
+# AUTH_LDAP_GROUP_SEARCH = LDAPSearch("ou=Report,ou=Groups,dc=local,dc=com",
 #     ldap.SCOPE_SUBTREE, "(objectClass=groupOfNames)"
 # )
 # AUTH_LDAP_GROUP_TYPE = GroupOfNamesType(name_attr="cn")
