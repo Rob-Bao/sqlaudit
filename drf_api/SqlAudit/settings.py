@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # # ldap setting
 # AUTH_LDAP_SERVER_URI = 'ldap://172.17.116.67:389'
 # AUTH_LDAP_BIND_DN = 'cn=Manager,dc=local,dc=com'
-# AUTH_LDAP_BIND_PASSWORD = 'mUgIIsI3eBQrq#0x'
+# AUTH_LDAP_BIND_PASSWORD = '0x'
 
 # AUTH_LDAP_USER_SEARCH = LDAPSearch("ou=Users,dc=local,dc=com",
 #     ldap.SCOPE_SUBTREE, "(cn=%(user)s)")
