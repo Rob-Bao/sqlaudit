@@ -89,10 +89,7 @@ class InceptionClass():
             cur.close()
             conn.close()
         except pymysql.Error as e:
-            Error = {}
-            Error['ID'] = 1
-            Error['errlevel'] = 1
-            Error['SQL'] = kwargs['sql']
+            Error = {'ID':1,'errlevel':1,'SQL':kwargs['sql']}
             Error['errormessage'] = 'Mysql Error %d' % e.args[0],e.args[1]
             result.append(Error)
         return result
