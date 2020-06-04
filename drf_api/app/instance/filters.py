@@ -31,7 +31,7 @@ class TablesFilter(django_filters.rest_framework.FilterSet):
     """
     # instance_name = django_filters.CharFilter(lookup_expr='icontains')
     # db_name = django_filters.CharFilter(lookup_expr='icontains')
-    table_name = django_filters.CharFilter(lookup_expr='icontains')
+    # table_name = django_filters.CharFilter(lookup_expr='icontains') # icontains表示模糊查询（包含），并且忽略大小写；iexact表示精确匹配, 并且忽略大小写；
     class Meta:
         model = DbTableInfo
         fields = ['instance_name','db_name','table_name']
